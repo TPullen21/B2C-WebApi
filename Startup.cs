@@ -44,7 +44,7 @@ namespace B2CWebApi
               })
                 .AddJwtBearer(jwtOptions =>
                 {
-                  jwtOptions.Authority = $"https://b2ctom.b2clogin.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
+                  jwtOptions.Authority = $"https://login.microsoftonline.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
                   jwtOptions.Audience = Configuration["AzureAdB2C:ClientId"];
                   jwtOptions.Events = new JwtBearerEvents
                   {
